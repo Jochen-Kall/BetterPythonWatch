@@ -11,9 +11,8 @@ Customized add to watchlist action, that consumes a variable, generates a meta d
 
 To use, simply select the variable of interest in the editor while in debug mode and execute the action "Debug: add to Watch [tensor]"
 
-\!\[Adding a tensor to the watchlist\]\(images/Before.png\)
-\!\[Adding a tensor to the watchlist\]\(images/Action_in_action.png\)
-
+![Adding a tensor to the watchlist - before](images/Before.png)
+![Adding a tensor to the watchlist - after](images/Action_in_action.png)
 
 ## Requirements
 
