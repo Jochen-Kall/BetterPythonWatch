@@ -2,11 +2,10 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
-
-// a function that returns the current selection and text in the currently active editor
-
+/**
+ * Retrieves the active text editor, selection, and selected text.
+ * @returns An array containing the active text editor, selection, and selected text, or undefined if there is no active editor or no text selected.
+ */
 function getSelection(): [vscode.TextEditor, vscode.Selection, string] | undefined {
 	let editor = vscode.window.activeTextEditor;
 	if (!editor) {
@@ -23,25 +22,10 @@ function getSelection(): [vscode.TextEditor, vscode.Selection, string] | undefin
 
 }
 
-
+// This method is called when your extension is activated
+// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "pythonwatchhelper" is now active!');
-
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('pythonwatchhelper.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from PythonWatchHelper!');
-	});
-
-	context.subscriptions.push(disposable);
-
-	// Register the new command
+	// Register the custom add to watchlist command
 	let addToWatchlistDisposable = vscode.commands.registerCommand('pythonwatchhelper.addToWatchlist', async () => {
 		// Get the current active text editor
 

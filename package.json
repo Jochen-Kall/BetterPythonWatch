@@ -14,12 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "pythonwatchhelper.helloWorld",
-        "title": "Hello World"
-      },
-      {
 	"command": "pythonwatchhelper.addToWatchlist",
-	"title": "Watch Python"
+	"title": "Debug: Add to Watch [tensor]"
       }
     ]
   },
